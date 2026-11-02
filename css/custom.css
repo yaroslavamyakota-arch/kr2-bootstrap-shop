@@ -1,0 +1,44 @@
+:root {
+    --bs-primary: #3a7b5e;
+    --bs-primary-rgb: 58, 123, 94;
+    --bs-dark: #0d4a32;
+    --bs-dark-rgb: 13, 74, 50;
+    --bs-light: #fcf5f5;
+    --bs-body-bg: #fcf5f5;
+    --bs-body-color: #333333;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-dark);
+    --bs-btn-hover-border-color: var(--bs-dark);
+    --bs-btn-active-bg: var(--bs-dark);
+    --bs-btn-active-border-color: var(--bs-dark);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+}
+
+.hero-img {
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    width: 100%;
+    max-height: 500px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(13, 74, 50, 0.15);
+}
