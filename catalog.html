@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Направления – Студия йоги "Баланс"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="index.html">
+                <div class="logo-wrapper"><img src="images/yoga-up.png" alt="Логотип"></div>
+                YogaBalance
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="catalog.html">Направления</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="trainers.html">Тренеры</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">О нас</a></li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="d-flex flex-column text-center text-lg-end justify-content-center">
+                        <a href="tel:+79991234567" class="nav-phone">+7 (999) 123-45-67</a>
+                        <span class="nav-work-time">Ежедневно с 08:00 до 22:00</span>
+                    </div>
+                    <a href="order.html" class="btn btn-nav-order">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="alert alert-custom mb-5" role="alert">
+            <i class="bi bi-info-circle me-2"></i> Выберите подходящее направление. Если вы новичок, мы рекомендуем начать с Хатха-йоги или Инь-йоги.
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                <div class="card shadow-sm border-0 p-4">
+                    <h4 class="h5 fw-bold mb-3">Фильтры</h4>
+                    <h6 class="fw-bold mt-3 text-muted">Уровень сложности</h6>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="beginner" id="filterBeginner">
+                        <label class="form-check-label" for="filterBeginner">Для новичков</label>
+                    </div>
+                    <div class="form-check mb-4">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="advanced" id="filterAdvanced">
+                        <label class="form-check-label" for="filterAdvanced">Продвинутый</label>
+                    </div>
+                    <button class="btn btn-outline-secondary w-100" id="resetFilters">Сбросить</button>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <h2 class="mb-4 text-dark fw-bold">Все направления</h2>
+                <div class="row g-4" id="productsContainer">
+                    <div class="col-12 col-md-6 col-xl-4 product-item" data-level="beginner">
+                        <div class="card h-100 shadow-sm p-4">
+                            <span class="badge mb-3 align-self-start" style="background-color: #3a7b5e;">Для новичков</span>
+                            <h3 class="h5 text-dark fw-bold"><i class="bi bi-sun text-success me-2"></i>Хатха-йога</h3>
+                            <p class="text-muted small mb-3">Классическая практика, объединяющая асаны и дыхательные упражнения. Идеальный старт для знакомства с телом.</p>
+                            <p class="fw-bold mb-3 mt-auto text-dark">Разовое: 500 ₽</p>
+                            <div class="d-flex gap-2 mt-auto align-self-start w-100">
+                                <a class="btn btn-outline-primary w-50" href="product.html?direction=hatha">Подробнее</a>
+                                <a class="btn btn-primary w-50" href="order.html?direction=hatha">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 product-item" data-level="advanced">
+                        <div class="card h-100 shadow-sm p-4">
+                            <span class="badge mb-3 align-self-start" style="background-color: #d6b9b9; color: #333;">Динамика</span>
+                            <h3 class="h5 text-dark fw-bold"><i class="bi bi-wind text-success me-2"></i>Виньяса-флоу</h3>
+                            <p class="text-muted small mb-3">Активная динамичная практика. Позы плавно перетекают одна в другую под ритм дыхания. Развивает выносливость.</p>
+                            <p class="fw-bold mb-3 mt-auto text-dark">Разовое: 600 ₽</p>
+                            <div class="d-flex gap-2 mt-auto align-self-start w-100">
+                                <a class="btn btn-outline-primary w-50" href="product.html?direction=vinyasa">Подробнее</a>
+                                <a class="btn btn-primary w-50" href="order.html?direction=vinyasa">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 product-item" data-level="beginner">
+                        <div class="card h-100 shadow-sm p-4">
+                            <span class="badge mb-3 align-self-start" style="background-color: #ffd6d6; color: #333;">Расслабление</span>
+                            <h3 class="h5 text-dark fw-bold"><i class="bi bi-moon-stars text-success me-2"></i>Инь-йога</h3>
+                            <p class="text-muted small mb-3">Медленная практика с длительным удержанием поз (3-5 минут). Глубоко прорабатывает фасции и суставы, снимает стресс.</p>
+                            <p class="fw-bold mb-3 mt-auto text-dark">Разовое: 550 ₽</p>
+                            <div class="d-flex gap-2 mt-auto align-self-start w-100">
+                                <a class="btn btn-outline-primary w-50" href="product.html?direction=yin">Подробнее</a>
+                                <a class="btn btn-primary w-50" href="order.html?direction=yin">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 product-item" data-level="advanced">
+                        <div class="card h-100 shadow-sm p-4">
+                            <span class="badge mb-3 align-self-start" style="background-color: #0d4a32;">Сила</span>
+                            <h3 class="h5 text-dark fw-bold"><i class="bi bi-fire text-success me-2"></i>Аштанга-йога</h3>
+                            <p class="text-muted small mb-3">Интенсивная силовая практика. Требует хорошей физической формы и дисциплины. Развивает не только тело, но и силу духа.</p>
+                            <p class="fw-bold mb-3 mt-auto text-dark">Разовое: 700 ₽</p>
+                            <div class="d-flex gap-2 mt-auto align-self-start w-100">
+                                <a class="btn btn-outline-primary w-50" href="product.html?direction=ashtanga">Подробнее</a>
+                                <a class="btn btn-primary w-50" href="order.html?direction=ashtanga">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 product-item" data-level="beginner">
+                        <div class="card h-100 shadow-sm p-4">
+                            <span class="badge mb-3 align-self-start" style="background-color: #e6b8b8; color: #333;">Дыхание</span>
+                            <h3 class="h5 text-dark fw-bold"><i class="bi bi-lightning-charge text-success me-2"></i>Кундалини</h3>
+                            <p class="text-muted small mb-3">Работа с энергией через дыхание (пранаямы), мантры и медитацию. Отличный способ очистить ум и зарядиться бодростью.</p>
+                            <p class="fw-bold mb-3 mt-auto text-dark">Разовое: 600 ₽</p>
+                            <div class="d-flex gap-2 mt-auto align-self-start w-100">
+                                <a class="btn btn-outline-primary w-50" href="product.html?direction=kundalini">Подробнее</a>
+                                <a class="btn btn-primary w-50" href="order.html?direction=kundalini">Записаться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pricing" class="mt-5 pt-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden" style="background: linear-gradient(135deg, #0d4a32 0%, #3a7b5e 100%);">
+                        <div class="card-body p-5 text-center text-white d-flex flex-column align-items-center">
+                            <i class="bi bi-patch-question display-4 mb-3" style="color: #e6b8b8;"></i>
+                            <h3 class="fw-bold mb-3">Не знаете, какое направление выбрать?</h3>
+                            <p class="fs-5 mb-4 opacity-75" style="max-width: 700px;">Приходите на бесплатное пробное занятие. Наш опытный тренер поможет определить ваш уровень подготовки и подберет идеальную практику именно для вас.</p>
+                            <button class="btn btn-light btn-lg rounded-pill px-5 fw-bold text-success shadow" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                Записаться на пробное
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center mb-5 text-dark fw-bold">Абонементы</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                        <h3 class="h4 fw-bold text-dark mt-2">Пробное занятие</h3>
+                        <p class="text-muted mb-4">Для знакомства со студией</p>
+                        <div class="display-5 fw-bold mb-4" style="color: #3a7b5e;">Бесплатно</div>
+                        <ul class="list-group list-group-flush mb-4 text-start">
+                            <li class="list-group-item">• 1 занятие (90 минут)</li>
+                            <li class="list-group-item">• Любое направление</li>
+                            <li class="list-group-item">• <strong>Консультация тренера</strong></li>
+                        </ul>
+                        <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться на пробное</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border-2 text-center p-4 position-relative" style="border-color: #3a7b5e !important;">
+                        <span class="badge position-absolute top-0 start-50 translate-middle px-3 py-2 fs-6" style="background-color: #3a7b5e;">Популярный</span>
+                        <h3 class="h4 fw-bold text-dark mt-3">Месяц безлимит</h3>
+                        <p class="text-muted mb-4">Неограниченные занятия</p>
+                        <div class="display-5 fw-bold mb-4" style="color: #3a7b5e;">3 500 ₽</div>
+                        <ul class="list-group list-group-flush mb-4 text-start">
+                            <li class="list-group-item">• Неограниченные занятия</li>
+                            <li class="list-group-item">• Все направления</li>
+                            <li class="list-group-item">• Все филиалы</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#orderModal">Купить абонемент</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                        <h3 class="h4 fw-bold text-dark mt-2">Год безлимит</h3>
+                        <p class="text-muted mb-4">Максимальная выгода</p>
+                        <div class="display-5 fw-bold mb-4" style="color: #3a7b5e;">30 000 ₽</div>
+                        <ul class="list-group list-group-flush mb-4 text-start">
+                            <li class="list-group-item">• Неограниченные занятия</li>
+                            <li class="list-group-item">• Все направления и филиалы</li>
+                            <li class="list-group-item">• 1 персональная тренировка в подарок</li>
+                        </ul>
+                        <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#orderModal">Купить абонемент</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-5 pb-4 mt-auto">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                
+                <!-- 1. Логотип, слоган и кнопка -->
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none mb-2">
+                        <div class="logo-wrapper" style="width: 36px; height: 36px; margin-right: 10px;">
+                            <img src="images/yoga-up.png" alt="Логотип">
+                        </div>
+                        <h5 class="fw-bold mb-0 text-white">YogaBalance</h5>
+                    </a>
+                    <p class="fst-italic text-white-50 mb-5">«Твой путь к внутреннему балансу»</p>
+                    <a href="order.html" class="btn btn-footer-order">Записаться</a>
+                </div>
+
+                <!-- 2. Навигация -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">Навигация</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html">Главная</a></li>
+                        <li class="mb-2"><a href="catalog.html">Направления</a></li>
+                        <li class="mb-2"><a href="trainers.html">Тренеры</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Филиалы и контакты -->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">
+                        <i class="bi bi-geo-alt-fill me-1" style="color: #e6b8b8;"></i>Наши филиалы
+                    </h6>
+                    
+                    <div class="row mb-3">
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Центральный:</span> ул. Ленина, 10</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Южный:</span> ул. Южная, 7</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Северный:</span> пр. Мира, 45</div>
+                    </div>
+                    
+                    <hr class="border-secondary my-3" style="max-width: 250px; opacity: 0.3;">
+
+                    <div class="mb-0">
+                        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:+79991234567" class="footer-contact-link fw-bold">+7 (999) 123-45-67</a></p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i>Ежедневно с 08:00 до 22:00</p>
+                        <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i><a href="mailto:info@yogabalance.ru" class="footer-contact-link">info@yogabalance.ru</a></p>
+                        
+                        <div class="d-flex gap-2">
+                            <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <hr class="border-secondary mb-3" style="opacity: 0.2;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start footer-copy">
+                    &copy; 2026 Студия йоги "Баланс". Все права защищены.
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0 footer-copy">
+                    <a href="#" class="me-3">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <form id="quickOrderForm">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title fw-bold" id="orderModalLabel">Запись на пробное занятие</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-muted mb-4">Оставьте свои контакты, и мы свяжемся с вами для подтверждения. Первое занятие — бесплатно!</p>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="modalName" class="form-label fw-bold small text-muted">Ваше имя *</label>
+                                <input type="text" class="form-control form-control-lg bg-light" id="modalName" placeholder="Николай Иванов" minlength="2" maxlength="30" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="modalPhone" class="form-label fw-bold small text-muted">Номер телефона *</label>
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bg-light">🇷🇺 +7</span>
+                                    <input type="tel" class="form-control bg-light" id="modalPhone" placeholder="(999) 999-9999" pattern="[0-9+\(\)\-\s]{10,18}" maxlength="18" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="modalAddress" class="form-label fw-bold small text-muted">Клуб (Филиал) *</label>
+                                <select class="form-select form-select-lg bg-light" id="modalAddress" required>
+                                    <option value="" selected disabled>Выберите филиал...</option>
+                                    <option value="center">Центральный (ул. Ленина, 10)</option>
+                                    <option value="north">Северный (пр. Мира, 45)</option>
+                                    <option value="south">Южный (ул. Южная, 7)</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="modalEmail" class="form-label fw-bold small text-muted">Почта</label>
+                                <input type="email" class="form-control form-control-lg bg-light" id="modalEmail" placeholder="test@mail.ru">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="modalAgree" required>
+                                    <label class="form-check-label text-muted" for="modalAgree">Согласен на обработку данных *</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-outline-secondary btn-lg rounded-pill px-4" data-bs-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5 shadow">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollTopBtn" class="btn" aria-label="Наверх">
+        <img src="images/yoga-up.png" alt="Наверх">
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.filter-checkbox');
+            const products = document.querySelectorAll('.product-item');
+            const resetBtn = document.getElementById('resetFilters');
+
+            function filterProducts() {
+                const activeFilters = Array.from(checkboxes).filter(i => i.checked).map(i => i.value);
+                products.forEach(product => {
+                    const level = product.getAttribute('data-level');
+                    if (activeFilters.length === 0 || activeFilters.includes(level)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+            checkboxes.forEach(box => box.addEventListener('change', filterProducts));
+            resetBtn.addEventListener('click', () => {
+                checkboxes.forEach(box => box.checked = false);
+                filterProducts();
+            });
+
+            const phoneInput = document.getElementById('modalPhone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function () {
+                    this.value = this.value.replace(/[^0-9+\-\(\)\s]/g, '');
+                });
+            }
+            document.getElementById('quickOrderForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                alert('Спасибо! Ваша заявка принята.');
+                this.reset(); 
+                const modal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
+                modal.hide();
+            });
+
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.onscroll = function() {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollTopBtn.style.display = 'block';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+            };
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

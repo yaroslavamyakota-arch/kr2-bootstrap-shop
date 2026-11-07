@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренеры – Студия йоги "Баланс"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="index.html">
+                <div class="logo-wrapper"><img src="images/yoga-up.png" alt="Логотип"></div>
+                YogaBalance
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="catalog.html">Направления</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="trainers.html">Тренеры</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">О нас</a></li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="d-flex flex-column text-center text-lg-end justify-content-center">
+                        <!-- Убрали lh-1 и mb-1 -->
+                        <a href="tel:+79991234567" class="nav-phone">+7 (999) 123-45-67</a>
+                        <span class="nav-work-time">Ежедневно с 08:00 до 22:00</span>
+                    </div>
+                    <a href="order.html" class="btn btn-nav-order">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 py-4">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-dark">Тренеры</h2>
+            <p class="lead text-muted">Наши преподаватели — это сердце студии. Они помогут вам найти свой путь в йоге.</p>
+        </div>
+
+        <section class="mb-5">
+            <h3 class="mb-4 text-primary fw-bold border-bottom pb-2">Хатха-йога и Медитация</h3>
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer1">
+                        <img src="images/trainer-anna.jpg" onerror="this.src='https://placehold.co/300x300/e0eafc/333333?text=Анна'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Анна">
+                        <h5 class="fw-bold text-dark mb-1">Анна Смирнова</h5>
+                        <p class="text-muted small mb-2">Хатха, Виньяса</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 10 лет</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> Мастер спорта, RYT-500</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"Помогает найти баланс между силой и гибкостью."</p>
+                    </button>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer2">
+                        <img src="images/trainer-elena.jpg" onerror="this.src='https://placehold.co/300x300/ffd6d6/333333?text=Елена'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Елена">
+                        <h5 class="fw-bold text-dark mb-1">Елена Иванова</h5>
+                        <p class="text-muted small mb-2">Инь-йога, Медитация</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 7 лет</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> Психолог, инструктор Инь</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"Учит замедляться, слышать себя и снимать стресс."</p>
+                    </button>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer5">
+                        <img src="images/trainer-alexey.jpg" onerror="this.src='https://placehold.co/300x300/d4edda/333333?text=Алексей'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Алексей">
+                        <h5 class="fw-bold text-dark mb-1">Алексей Новиков</h5>
+                        <p class="text-muted small mb-2">Хатха, Йога для спины</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 9 лет</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> Терапевт, специалист по спине</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"Специализируется на безопасной работе с позвоночником."</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="mb-4 text-primary fw-bold border-bottom pb-2">Силовые практики</h3>
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer3">
+                        <img src="images/trainer-dmitry.jpg" onerror="this.src='https://placehold.co/300x300/d6b9b9/333333?text=Дмитрий'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Дмитрий">
+                        <h5 class="fw-bold text-dark mb-1">Дмитрий Петров</h5>
+                        <p class="text-muted small mb-2">Аштанга, Силовые</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 12 лет</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> Обучение в Индии (Майсур)</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"Тренирует выносливость и дисциплину ума."</p>
+                    </button>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer4">
+                        <img src="images/trainer-maria.jpg" onerror="this.src='https://placehold.co/300x300/3a7b5e/ffffff?text=Мария'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Мария">
+                        <h5 class="fw-bold text-dark mb-1">Мария Ким</h5>
+                        <p class="text-muted small mb-2">Кундалини, Пранаяма</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 5 лет</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> Специалист по дыханию</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"Учит управлять энергией через дыхание."</p>
+                    </button>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer6">
+                        <img src="images/trainer-ivan.jpg" onerror="this.src='https://placehold.co/300x300/f8d7d7/333333?text=Иван'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Иван">
+                        <h5 class="fw-bold text-dark mb-1">Иван Волков</h5>
+                        <p class="text-muted small mb-2">Йога для мужчин</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 6 лет</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> КМС по тяжелой атлетике</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"Адаптирует йогу для спортсменов."</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="mb-4 text-primary fw-bold border-bottom pb-2">Специальные направления</h3>
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer7">
+                        <img src="images/trainer-olga.jpg" onerror="this.src='https://placehold.co/300x300/e6e6fa/333333?text=Ольга'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Ольга">
+                        <h5 class="fw-bold text-dark mb-1">Ольга Соколова</h5>
+                        <p class="text-muted small mb-2">Аэройога</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 8 лет</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> Сертификат по Аэройоге</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"Помогает безопасно освоить инверсии."</p>
+                    </button>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <button class="btn btn-link text-decoration-none p-0 w-100" data-bs-toggle="offcanvas" data-bs-target="#trainer8">
+                        <img src="images/trainer-sofya.jpg" onerror="this.src='https://placehold.co/300x300/fffacd/333333?text=Софья'" class="rounded-circle mb-3 shadow-sm trainer-avatar" alt="Софья">
+                        <h5 class="fw-bold text-dark mb-1">Софья Морозова</h5>
+                        <p class="text-muted small mb-2">Детская йога</p>
+                        <div class="text-start px-3 mb-2">
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-clock-history me-1 text-success"></i> Стаж: 4 года</span>
+                            <span class="d-block text-muted small mb-1"><i class="bi bi-award me-1 text-success"></i> Педагог, игровая йога</span>
+                        </div>
+                        <p class="text-muted small px-3 fst-italic border-start border-2 border-success text-start">"В игровой форме развивает гибкость у детей."</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- OFFCANVAS ОКНА -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer1" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-anna.jpg" onerror="this.src='https://placehold.co/300x300/e0eafc/333333?text=Анна'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Анна Смирнова</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Старший преподаватель</p>
+            <p class="text-start">Мастер спорта по художественной гимнастике. Сертифицированный преподаватель Yoga Alliance (RYT-500).</p>
+            <p class="text-start">Проводит занятия по Хатха-йоге и Виньяса-флоу. Акцентирует внимание на правильном дыхании, выравнивании тела и безопасности. Её классы подходят как для новичков, так и для продвинутых учеников.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2014 года.</p>
+            <a href="order.html?trainer=anna" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Анне</a>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer2" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-elena.jpg" onerror="this.src='https://placehold.co/300x300/ffd6d6/333333?text=Елена'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Елена Иванова</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Инструктор по медитации</p>
+            <p class="text-start">Психолог, сертифицированный инструктор по Инь-йоге.</p>
+            <p class="text-start">Помогает ученикам снять стресс и восстановить ресурс через долгие удержания поз и дыхательные практики. Создает на занятиях атмосферу полного покоя и безопасности.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2017 года.</p>
+            <a href="order.html?trainer=elena" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Елене</a>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer3" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-dmitry.jpg" onerror="this.src='https://placehold.co/300x300/d6b9b9/333333?text=Дмитрий'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Дмитрий Петров</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Преподаватель Аштанги</p>
+            <p class="text-start">Более 12 лет личной практики. Изучал йогу в Индии (Майсур).</p>
+            <p class="text-start">Проводит интенсивные силовые тренировки для тех, кто хочет развить выносливость и дисциплину. Внимательно следит за техникой выполнения асан.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2012 года.</p>
+            <a href="order.html?trainer=dmitry" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Дмитрию</a>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer4" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-maria.jpg" onerror="this.src='https://placehold.co/300x300/3a7b5e/ffffff?text=Мария'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Мария Ким</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Инструктор Кундалини</p>
+            <p class="text-start">Специалист по энергетическим практикам и дыханию (Пранаяма).</p>
+            <p class="text-start">На её занятиях вы научитесь управлять своей энергией, избавитесь от внутренних блоков и почувствуете прилив сил.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2019 года.</p>
+            <a href="order.html?trainer=maria" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Марии</a>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer5" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-alexey.jpg" onerror="this.src='https://placehold.co/300x300/d4edda/333333?text=Алексей'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Алексей Новиков</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Инструктор Хатха-йоги</p>
+            <p class="text-start">Специализируется на терапевтической йоге и здоровье спины.</p>
+            <p class="text-start">Его занятия идеально подходят для людей с сидячей работой и проблемами с осанкой. Поможет мягко исправить зажимы и укрепить мышечный корсет.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2015 года.</p>
+            <a href="order.html?trainer=alexey" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Алексею</a>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer6" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-ivan.jpg" onerror="this.src='https://placehold.co/300x300/f8d7d7/333333?text=Иван'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Иван Волков</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Инструктор силовых практик</p>
+            <p class="text-start">КМС по тяжелой атлетике. Адаптирует йогу для мужчин и профессиональных спортсменов.</p>
+            <p class="text-start">Поможет развить силу, гибкость и предотвратить травмы. Его тренировки — это баланс между тяжелой работой и осознанностью.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2018 года.</p>
+            <a href="order.html?trainer=ivan" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Ивану</a>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer7" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-olga.jpg" onerror="this.src='https://placehold.co/300x300/e6e6fa/333333?text=Ольга'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Ольга Соколова</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Инструктор Аэройоги</p>
+            <p class="text-start">Работа с гамаками. Помогает безопасно освоить инверсии и вытяжение позвоночника.</p>
+            <p class="text-start">Аэройога — это отличный способ разгрузить спину и получить новые ощущения от практики. Уделяет особое внимание страховке и комфорту.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2016 года.</p>
+            <a href="order.html?trainer=olga" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Ольге</a>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="trainer8" style="width: 500px; max-width: 100%;">
+        <div class="offcanvas-header"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button></div>
+        <div class="offcanvas-body text-center d-flex flex-column align-items-center">
+            <img src="images/trainer-sofya.jpg" onerror="this.src='https://placehold.co/300x300/fffacd/333333?text=Софья'" class="rounded-circle mb-4 shadow" style="width: 200px; height: 200px; object-fit: cover;">
+            <h2 class="fw-bold mb-1">Софья Морозова</h2>
+            <p class="mb-4" style="color: #e6b8b8;">Детский инструктор</p>
+            <p class="text-start">Педагог. Проводит игровую йогу для детей от 4 до 12 лет.</p>
+            <p class="text-start">В легкой и игровой форме помогает детям развить гибкость, координацию и уверенность в себе. Находит подход к каждому ребенку.</p>
+            <p class="text-start text-white-50 mb-4">Опыт преподавания: с 2020 года.</p>
+            <a href="order.html?trainer=sofya" class="btn btn-primary btn-lg w-100 mt-auto">Записаться к Софье</a>
+        </div>
+    </div>
+
+    <footer class="pt-5 pb-4 mt-auto">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                
+                <!-- 1. Логотип, слоган и кнопка -->
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none mb-2">
+                        <div class="logo-wrapper" style="width: 36px; height: 36px; margin-right: 10px;">
+                            <img src="images/yoga-up.png" alt="Логотип">
+                        </div>
+                        <h5 class="fw-bold mb-0 text-white">YogaBalance</h5>
+                    </a>
+                    <p class="fst-italic text-white-50 mb-5">«Твой путь к внутреннему балансу»</p>
+                    <a href="order.html" class="btn btn-footer-order">Записаться</a>
+                </div>
+
+                <!-- 2. Навигация -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">Навигация</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html">Главная</a></li>
+                        <li class="mb-2"><a href="catalog.html">Направления</a></li>
+                        <li class="mb-2"><a href="trainers.html">Тренеры</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Филиалы и контакты -->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">
+                        <i class="bi bi-geo-alt-fill me-1" style="color: #e6b8b8;"></i>Наши филиалы
+                    </h6>
+                    
+                    <div class="row mb-3">
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Центральный:</span> ул. Ленина, 10</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Южный:</span> ул. Южная, 7</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Северный:</span> пр. Мира, 45</div>
+                    </div>
+                    
+                    <hr class="border-secondary my-3" style="max-width: 250px; opacity: 0.3;">
+
+                    <div class="mb-0">
+                        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:+79991234567" class="footer-contact-link fw-bold">+7 (999) 123-45-67</a></p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i>Ежедневно с 08:00 до 22:00</p>
+                        <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i><a href="mailto:info@yogabalance.ru" class="footer-contact-link">info@yogabalance.ru</a></p>
+                        
+                        <div class="d-flex gap-2">
+                            <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <hr class="border-secondary mb-3" style="opacity: 0.2;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start footer-copy">
+                    &copy; 2026 Студия йоги "Баланс". Все права защищены.
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0 footer-copy">
+                    <a href="#" class="me-3">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="btn" aria-label="Наверх">
+        <img src="images/yoga-up.png" alt="Наверх">
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        };
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

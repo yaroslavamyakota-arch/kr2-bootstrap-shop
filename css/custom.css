@@ -1,3 +1,6 @@
+/* =========================================
+   ПЕРЕМЕННЫЕ И БАЗОВЫЕ НАСТРОЙКИ
+   ========================================= */
 :root {
     --bs-primary: #3a7b5e;
     --bs-primary-rgb: 58, 123, 94;
@@ -8,6 +11,22 @@
     --bs-body-color: #333333;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bs-body-bg);
+}
+main {
+    flex: 1 0 auto;
+}
+footer {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   КНОПКИ И ГЛОБАЛЬНЫЕ СТИЛИ (Убираем синий цвет)
+   ========================================= */
 .btn-primary {
     --bs-btn-bg: var(--bs-primary);
     --bs-btn-border-color: var(--bs-primary);
@@ -16,7 +35,6 @@
     --bs-btn-active-bg: var(--bs-dark);
     --bs-btn-active-border-color: var(--bs-dark);
 }
-
 .btn-outline-primary {
     --bs-btn-color: var(--bs-primary);
     --bs-btn-border-color: var(--bs-primary);
@@ -26,19 +44,360 @@
     --bs-btn-active-border-color: var(--bs-primary);
 }
 
-.hero-img {
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    width: 100%;
-    max-height: 500px;
+/* Убираем синюю обводку при клике на кнопки и поля */
+.btn:focus, .btn:active:focus, .btn-check:focus + .btn, 
+.form-control:focus, .form-select:focus, .form-check-input:focus,
+.navbar-toggler:focus {
+    border-color: #3a7b5e !important;
+    box-shadow: 0 0 0 0.25rem rgba(58, 123, 94, 0.25) !important;
+    outline: none !important;
+}
+.btn-outline-primary:active, .btn-outline-primary.active {
+    background-color: #3a7b5e !important;
+    border-color: #3a7b5e !important;
+    color: #fff !important;
+}
+.form-check-input:checked {
+    background-color: #3a7b5e !important;
+    border-color: #3a7b5e !important;
+}
+::selection {
+    background-color: #e6b8b8;
+    color: #0d4a32;
 }
 
+/* =========================================
+   ШАПКА (NAVBAR)
+   ========================================= */
+.navbar-custom {
+    background-color: #0d4a32 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 0;
+    z-index: 1040 !important;
+}
+
+.navbar-brand-custom {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+}
+
+.logo-wrapper {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.7);
+}
+
+.nav-link-custom {
+    color: #ffffff !important; 
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.2s ease;
+}
+.nav-link-custom:hover, .nav-link-custom.active {
+    color: #e6b8b8 !important;
+}
+
+/* Телефон и время в шапке */
+.nav-phone {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem; /* Как у пунктов меню */
+    line-height: 1.2;
+    margin-bottom: 2px;
+    white-space: nowrap;
+}
+.nav-phone:hover {
+    color: #e6b8b8 !important;
+}
+
+.nav-work-time {
+    font-size: 0.75rem;
+    color: #9ca3af !important;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+
+/* Кнопка "Записаться" в шапке */
+.btn-nav-order {
+    background-color: #3a7b5e;
+    color: white !important;
+    border: none;
+    padding: 10px 28px; 
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-nav-order:hover {
+    background-color: #2b5c46;
+    color: white !important;
+}
+
+/* =========================================
+   HERO-БЛОК (ГЛАВНАЯ)
+   ========================================= */
+.hero-img-custom {
+    border-radius: 2rem 8rem 2rem 8rem;
+    box-shadow: 0 25px 50px -12px rgba(13, 74, 50, 0.25);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.hero-img-custom:hover {
+    transform: scale(1.02);
+}
+.hero-image-wrapper {
+    padding: 10px;
+}
+.hero-blob {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80%;
+    height: 90%;
+    background: linear-gradient(135deg, #e6b8b8 0%, #3a7b5e 100%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* =========================================
+   КОМПОНЕНТЫ (Карточки, иконки, таблицы)
+   ========================================= */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(13, 74, 50, 0.15);
+}
+
+.feature-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(13, 74, 50, 0.1) !important;
+}
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #fdf2f2;
+    color: #3a7b5e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+.feature-box:hover .feature-icon {
+    background-color: #3a7b5e;
+    color: #ffffff;
+}
+
+.trainer-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.btn-link:hover .trainer-avatar {
+    transform: scale(1.05);
+    border-color: var(--bs-primary);
+}
+
+.custom-table th {
+    background-color: var(--bs-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fdf2f2 !important;
+    color: #0d4a32 !important;
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+.alert-custom {
+    background-color: #fdf2f2;
+    color: #0d4a32;
+    border: 1px solid #e6b8b8;
+    border-radius: 8px;
+}
+
+/* Хлебные крошки */
+.breadcrumb {
+    --bs-breadcrumb-divider: '/';
+    --bs-breadcrumb-divider-color: #9ca3af;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+.breadcrumb-item a {
+    color: #3a7b5e !important;
+    text-decoration: none !important;
+    font-weight: 500;
+}
+.breadcrumb-item a:hover {
+    color: #0d4a32 !important;
+    text-decoration: underline !important;
+}
+.breadcrumb-item.active {
+    color: #6c757d !important;
+}
+
+/* =========================================
+   ИДЕАЛЬНЫЙ ФУТЕР (Единые размеры)
+   ========================================= */
+footer {
+    background-color: #0d4a32 !important;
+    font-size: 0.9rem; /* Базовый размер текста 14.4px */
+    color: #9ca3af;
+}
+
+/* Логотип */
+footer h5 {
+    font-size: 1.25rem; /* 20px */
+}
+
+/* Заголовки колонок (Навигация, Филиалы) */
+footer h6 {
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+/* Ссылки, текст, адреса */
+footer a, footer p, footer li {
+    color: #9ca3af !important;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #e6b8b8 !important;
+}
+
+/* Иконки контактов */
+footer p i {
+    color: #e6b8b8 !important;
+}
+
+/* Кнопка "Записаться" */
+.btn-footer-order {
+    background-color: #3a7b5e;
+    color: white !important;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-footer-order:hover {
+    background-color: #2b5c46;
+    color: white !important;
+}
+
+/* Иконки соцсетей */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #9ca3af !important;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #e6b8b8 !important;
+    color: #0d4a32 !important;
+    transform: translateY(-2px);
+}
+
+/* Стили для нижней строки (копирайт) */
+.footer-copy {
+    font-size: 0.85rem; /* Чуть меньше основного текста */
+    color: #6c757d !important;
+}
+
+.footer-copy a {
+    font-size: 0.85rem;
+    color: #6c757d !important;
+}
+
+.footer-copy a:hover {
+    color: #e6b8b8 !important;
+}
+
+/* =========================================
+   КНОПКА "НАВЕРХ"
+   ========================================= */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    display: none;
+    z-index: 1050;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid var(--bs-primary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    padding: 0;
+    overflow: hidden;
+}
+#scrollTopBtn:hover {
+    transform: translateY(-5px);
+    background-color: var(--bs-light);
+}
+#scrollTopBtn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.6);
+    transition: transform 0.3s ease;
+}
+
+/* Адаптив */
+@media (max-width: 991px) {
+    .hero-img-custom {
+        border-radius: 2rem;
+        max-height: 400px;
+    }
 }
