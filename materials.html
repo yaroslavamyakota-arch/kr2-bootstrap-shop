@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полезные материалы – Студия йоги "Баланс"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="index.html">
+                <div class="logo-wrapper"><img src="images/yoga-up.png" alt="Логотип"></div>
+                YogaBalance
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="catalog.html">Направления</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="schedule.html">Расписание</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="trainers.html">Тренеры</a></li>
+                    <!-- ИСПРАВЛЕНО: Название пункта меню -->
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="materials.html">Полезные материалы</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">О нас</a></li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="d-flex flex-column text-center text-lg-end justify-content-center">
+                        <a href="tel:+79991234567" class="nav-phone">+7 (999) 123-45-67</a>
+                        <span class="nav-work-time">Ежедневно с 08:00 до 22:00</span>
+                    </div>
+                    <a href="order.html" class="btn btn-nav-order">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-dark">Полезные материалы</h2>
+            <p class="lead text-muted">Полезные статьи, советы тренеров и словарь терминов для вашей практики.</p>
+        </div>
+
+        <!-- БЛОК 1: ПОЛЕЗНЫЕ МАТЕРИАЛЫ (СТАТЬИ) -->
+        <h3 class="fw-bold mb-4 text-dark border-bottom pb-2">Статьи и советы</h3>
+        <div class="row g-4 mb-5">
+            
+            <!-- Статья 1: Спина -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="images/article-back.jpg" onerror="this.src='https://placehold.co/400x250/e0eafc/333333?text=Здоровая+спина'" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Статья 1">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <span class="badge mb-2 align-self-start" style="background-color: #3a7b5e;">Здоровье</span>
+                        <h4 class="h5 fw-bold text-dark">3 асаны для здоровой спины</h4>
+                        <p class="text-muted small mb-3">Простые упражнения, которые помогут снять напряжение после рабочего дня за компьютером.</p>
+                        <button class="btn btn-outline-primary mt-auto w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#articleModal1">Читать статью</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 2: Дыхание -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="images/article-breath.jpg" onerror="this.src='https://placehold.co/400x250/ffd6d6/333333?text=Дыхание'" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Статья 2">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <span class="badge mb-2 align-self-start" style="background-color: #d6b9b9; color: #333;">Для новичков</span>
+                        <h4 class="h5 fw-bold text-dark">Как правильно дышать на коврике?</h4>
+                        <p class="text-muted small mb-3">Разбираем базовые техники дыхания (Уджайи) и почему задержка дыхания — это плохо.</p>
+                        <button class="btn btn-outline-primary mt-auto w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#articleModal2">Читать статью</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 3: Первое занятие -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="images/article-first.jpg" onerror="this.src='https://placehold.co/400x250/d4edda/333333?text=Первое+занятие'" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Статья 3">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <span class="badge mb-2 align-self-start" style="background-color: #ffd6d6; color: #333;">Практика</span>
+                        <h4 class="h5 fw-bold text-dark">Что взять с собой на первое занятие?</h4>
+                        <p class="text-muted small mb-3">Список вещей, которые понадобятся вам в студии, и о чем лучше оставить дома.</p>
+                        <button class="btn btn-outline-primary mt-auto w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#articleModal3">Читать статью</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 4: С чего начать -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="images/article-beginner.jpg" onerror="this.src='https://placehold.co/400x250/fffacd/333333?text=С+чего+начать'" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Статья 4">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <span class="badge mb-2 align-self-start" style="background-color: #0d4a32;">Философия</span>
+                        <h4 class="h5 fw-bold text-dark">Йога для начинающих: 3 главных мифа</h4>
+                        <p class="text-muted small mb-3">Развенчиваем страхи о том, что йога — это только для гибких и худых людей.</p>
+                        <button class="btn btn-outline-primary mt-auto w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#articleModal4">Читать статью</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 5: Шавасана -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="images/article-shavasana.jpg" onerror="this.src='https://placehold.co/400x250/e6e6fa/333333?text=Шавасана'" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Статья 5">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <span class="badge mb-2 align-self-start" style="background-color: #3a7b5e;">Здоровье</span>
+                        <h4 class="h5 fw-bold text-dark">Почему нельзя пропускать Шавасану?</h4>
+                        <p class="text-muted small mb-3">Рассказываем, почему 5 минут лежания в конце занятия важнее, чем кажется.</p>
+                        <button class="btn btn-outline-primary mt-auto w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#articleModal5">Читать статью</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 6: Медитация -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="images/article-meditation.jpg" onerror="this.src='https://placehold.co/400x250/f8d7d7/333333?text=Медитация'" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Статья 6">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <span class="badge mb-2 align-self-start" style="background-color: #d6b9b9; color: #333;">Медитация</span>
+                        <h4 class="h5 fw-bold text-dark">Как медитировать в домашних условиях</h4>
+                        <p class="text-muted small mb-3">Простая практика на 5 минут в день, которая поможет снизить уровень стресса.</p>
+                        <button class="btn btn-outline-primary mt-auto w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#articleModal6">Читать статью</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- БЛОК 2: СЛОВАРЬ ТЕРМИНОВ -->
+        <div class="row align-items-center bg-white rounded-4 shadow-sm p-4 p-md-5 mb-5">
+            <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                <h3 class="fw-bold text-dark mb-3">Словарь йоги</h3>
+                <p class="text-muted">Часто на занятиях тренеры используют термины на санскрите. Мы собрали самые популярные из них, чтобы вы чувствовали себя увереннее.</p>
+                <i class="bi bi-book display-1 text-success opacity-25"></i>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="accordion" id="glossaryAccordion">
+                    
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term1">
+                                Асана
+                            </button>
+                        </h2>
+                        <div id="term1" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body text-muted">
+                                Устойчивое и удобное положение тела. Это не просто физическое упражнение, а способ соединить ум и тело через концентрацию.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term2">
+                                Пранаяма
+                            </button>
+                        </h2>
+                        <div id="term2" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body text-muted">
+                                Искусство управления дыханием. «Прана» означает жизненную энергию, а «яма» — контроль. Практика различных дыхательных техник помогает успокоить ум и зарядиться энергией.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term3">
+                                Виньяса
+                            </button>
+                        </h2>
+                        <div id="term3" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body text-muted">
+                                Плавная последовательность асан, где каждое движение синхронизировано с вдохом или выдохом. Это динамичный стиль практики, который развивает выносливость.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#term4">
+                                Шавасана
+                            </button>
+                        </h2>
+                        <div id="term4" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body text-muted">
+                                Поза полного расслабления, которую обычно выполняют в конце занятия. Лежа на спине с закрытыми глазами, вы позволяете телу усвоить полученный опыт и восстановить силы.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- МОДАЛЬНЫЕ ОКНА ДЛЯ СТАТЕЙ -->
+    <!-- Статья 1 -->
+    <div class="modal fade" id="articleModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-bold">3 асаны для здоровой спины</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">Если вы проводите много времени за компьютером, ваша спина нуждается в особой заботе. Сидячий образ жизни приводит к зажимам в шейном и грудном отделах. Вот три простые асаны, которые помогут снять напряжение и вернуть легкость:</p>
+                    
+                    <h6 class="fw-bold mt-4 text-success">1. Марджариасана (Поза кошки)</h6>
+                    <p class="text-muted">Стоя на четвереньках, на вдохе прогибайте спину вниз (смотря в потолок), а на выдохе — округляйте спину (смотря в пупок). Это отличная разминка для позвоночника, которая мягко прорабатывает каждый позвонок.</p>
+                    
+                    <h6 class="fw-bold mt-4 text-success">2. Баласана (Поза ребенка)</h6>
+                    <p class="text-muted">Сядьте на пятки и потянитесь руками вперед, опустив лоб на коврик. Позвольте спине полностью расслабиться и вытянуться. Это компенсация после прогибов. Побудьте в этой позе 1-2 минуты, глубоко дыша.</p>
+                    
+                    <h6 class="fw-bold mt-4 text-success">3. Адхо Мукха Шванасана (Собака мордой вниз)</h6>
+                    <p class="text-muted">Отличное упражнение для вытяжения всего позвоночника и снятия усталости в плечах. Не стремитесь сразу поставить пятки на пол — главное, чтобы спина была прямой, а копчик тянулся вверх.</p>
+                    
+                    <div class="alert alert-custom mt-4">
+                        <i class="bi bi-info-circle me-2"></i> Помните, что при острых болях в спине важно заниматься под присмотром опытного тренера. Записывайтесь на наше направление «Йога для спины» с Алексеем Новиковым!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Статья 2 -->
+    <div class="modal fade" id="articleModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-bold">Как правильно дышать на коврике?</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">Дыхание — это основа йоги. Без правильного дыхания асаны превращаются в обычную гимнастику. В практике мы чаще всего используем технику, которая называется <strong>Уджайи (Победоносное дыхание)</strong>.</p>
+                    
+                    <h6 class="fw-bold mt-4">Как дышать Уджайи?</h6>
+                    <ul>
+                        <li class="mb-2"><strong>Дышите только носом.</strong> И на вдохе, и на выдохе. Рот закрыт.</li>
+                        <li class="mb-2"><strong>Слегка сузьте голосовую щель.</strong> Представьте, что вы шепчете на выдохе. Вы должны слышать легкий шум океана в своей голове.</li>
+                        <li class="mb-2"><strong>Дышите животом (диафрагмой).</strong> На вдохе живот надувается, на выдохе — втягивается. Грудная клетка при этом остается неподвижной.</li>
+                    </ul>
+                    
+                    <h6 class="fw-bold mt-4 text-danger">Чего делать НЕЛЬЗЯ:</h6>
+                    <p class="text-muted">Никогда не задерживайте дыхание, если вам не сказал об этом тренер. Если дыхание сбилось, появилась отдышка или головокружение — сделайте паузу и отдохните в позе ребенка (Баласана). Йога — это не про терпение, а про комфорт.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Статья 3 -->
+    <div class="modal fade" id="articleModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-bold">Что взять с собой на первое занятие?</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">Чтобы ваше первое занятие прошло комфортно и вы не отвлекались на мелочи, вот небольшой список того, что стоит подготовить.</p>
+                    
+                    <h6 class="fw-bold mt-4 text-success"><i class="bi bi-check-circle-fill me-2"></i> Что обязательно взять:</h6>
+                    <ul class="text-muted mb-4">
+                        <li><strong>Удобную спортивную одежду.</strong> Это могут быть лосины и футболка (для женщин) или шорты и майка (для мужчин). Одежда не должна сковывать движения.</li>
+                        <li><strong>Бутылку с водой.</strong> Во время практики мы потеем, и водный баланс нужно восполнять.</li>
+                        <li><strong>Хорошее настроение.</strong> Настрой — это 50% успеха на коврике.</li>
+                    </ul>
+                    
+                    <h6 class="fw-bold text-danger"><i class="bi bi-x-circle-fill me-2"></i> Что не нужно брать:</h6>
+                    <ul class="text-muted mb-4">
+                        <li><strong>Коврик для йоги.</strong> В нашей студии мы бесплатно предоставим вам профессиональный коврик и инвентарь (блоки, ремни).</li>
+                        <li><strong>Тяжелую пищу.</strong> Не ешьте плотно за 1.5-2 часа до занятия. Иначе вам будет дискомфортно делать скручивания.</li>
+                        <li><strong>Духи с резким запахом.</strong> В зале может быть аллергик. Лучше использовать легкие масла или нейтральные ароматы.</li>
+                    </ul>
+                    <div class="alert alert-custom mt-3">
+                        <i class="bi bi-info-circle me-2"></i> Приходите за 10-15 минут до начала. Этого времени хватит, чтобы переодеться, познакомиться с тренером и занять удобное место в зале.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Статья 4 (Новая) -->
+    <div class="modal fade" id="articleModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-bold">Йога для начинающих: 3 главных мифа</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">Многие боятся идти на первое занятие из-за стереотипов. Давайте развенчаем самые популярные из них.</p>
+                    
+                    <h6 class="fw-bold mt-4">Миф 1: «В йогу берут только гибких»</h6>
+                    <p class="text-muted">Наоборот! Если вы совсем не гибкий — вам точно нужно на йогу. Гибкость — это не обязательное условие для входа, это <strong>результат</strong> вашей практики. На занятиях для новичков вы будете использовать блоки и ремни, чтобы безопасно выполнять асаны.</p>
+                    
+                    <h6 class="fw-bold mt-4">Миф 2: «Йога — это скучно и медленно»</h6>
+                    <p class="text-muted">Зависит от направления. Если вы хотите активную нагрузку и хорошую кардиотренировку — идите на Виньясу или Аштангу. Там вы будете потеть не меньше, чем в спортзале. Если хотите расслабиться — добро пожаловать на Инь-йогу или Медитацию.</p>
+                    
+                    <h6 class="fw-bold mt-4">Миф 3: «Йога — это религия»</h6>
+                    <p class="text-muted">Современная йога в студиях — это, прежде всего, фитнес и работа с телом и умом. Вы не обязаны петь мантры, верить в Будду или менять свою жизнь. Мы просто учимся чувствовать свое тело, правильно дышать и справляться со стрессом.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Статья 5 (Новая) -->
+    <div class="modal fade" id="articleModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-bold">Почему нельзя пропускать Шавасану?</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">В конце каждого занятия мы ложимся в Шавасану (Позу трупа) на 5-10 минут. Многие новички думают: «Зачем я платил деньги, чтобы просто лежать?» На самом деле, это одна из самых важных асан.</p>
+                    
+                    <h6 class="fw-bold mt-4">Что происходит в Шавасане?</h6>
+                    <ul class="text-muted mb-4">
+                        <li><strong>Отдыхает нервная система.</strong> Во время активной практики мы стимулируем симпатическую нервную систему (стресс). Шавасана включает парасимпатическую (отдых и пищеварение). Это как перезагрузка компьютера.</li>
+                        <li><strong>Усваивается опыт.</strong> Мозг интегрирует все движения, которые вы сделали. Мышцы запоминают новые паттерны.</li>
+                        <li><strong>Снимается напряжение.</strong> Вы позволяете телу полностью расслабиться под действием гравитации.</li>
+                    </ul>
+                    <p class="text-muted">Поэтому, если тренер говорит «переходим в Шавасану», не спешите скручивать коврик. Дайте себе эти 5 минут тишины — это лучшая инвестиция в ваше восстановление.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Статья 6 (Новая) -->
+    <div class="modal fade" id="articleModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title fw-bold">Как медитировать в домашних условиях</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="lead">Медитация — это не про то, чтобы остановить мысли. Это про то, чтобы наблюдать за ними, не вовлекаясь. Вот простая практика, которую можно сделать дома за 5 минут.</p>
+                    
+                    <h6 class="fw-bold mt-4 text-success">Практика «Дыхание на 5 минут»:</h6>
+                    <ol class="text-muted mb-4">
+                        <li class="mb-2">Сядьте удобно. Можно на стул или на подушку для медитации. Спина прямая, но не напряженная.</li>
+                        <li class="mb-2">Закройте глаза. Поставьте таймер на 5 минут на телефоне (чтобы не думать о времени).</li>
+                        <li class="mb-2">Переведите внимание на кончик носа. Почувствуйте, как воздух проходит внутрь и выходит наружу.</li>
+                        <li class="mb-2">Когда вы заметите, что отвлеклись на мысль (а это случится через 3 секунды), просто мягко верните внимание обратно к дыханию. Не ругайте себя.</li>
+                    </ol>
+                    <p class="text-muted">Регулярность важнее длительности. 5 минут каждый день лучше, чем 1 час раз в месяц.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ФУТЕР (Вставьте сюда ваш стандартный футер) -->
+    <footer class="pt-5 pb-4 mt-auto">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none mb-2">
+                        <div class="logo-wrapper" style="width: 36px; height: 36px; margin-right: 10px;">
+                            <img src="images/yoga-up.png" alt="Логотип">
+                        </div>
+                        <h5 class="fw-bold mb-0 text-white">YogaBalance</h5>
+                    </a>
+                    <p class="fst-italic text-white-50 mb-5">«Твой путь к внутреннему балансу»</p>
+                    <a href="order.html" class="btn btn-footer-order">Записаться</a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">Навигация</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html">Главная</a></li>
+                        <li class="mb-2"><a href="catalog.html">Направления</a></li>
+                        <li class="mb-2"><a href="schedule.html">Расписание</a></li>
+                        <li class="mb-2"><a href="trainers.html">Тренеры</a></li>
+                        <li class="mb-2"><a href="materials.html">Полезные материалы</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">
+                        <i class="bi bi-geo-alt-fill me-1" style="color: #e6b8b8;"></i>Наши филиалы
+                    </h6>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Центральный:</span> ул. Ленина, 10</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Южный:</span> ул. Южная, 7</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Северный:</span> пр. Мира, 45</div>
+                    </div>
+                    <hr class="border-secondary my-3" style="max-width: 250px; opacity: 0.3;">
+                    <div class="mb-0">
+                        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:+79991234567" class="footer-contact-link fw-bold">+7 (999) 123-45-67</a></p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i>Ежедневно с 08:00 до 22:00</p>
+                        <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i><a href="mailto:info@yogabalance.ru" class="footer-contact-link">info@yogabalance.ru</a></p>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary mb-3" style="opacity: 0.2;">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start footer-copy">
+                    &copy; 2026 Студия йоги "Баланс". Все права защищены.
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0 footer-copy">
+                    <a href="#" class="me-3">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="btn" aria-label="Наверх">
+        <img src="images/yoga-up.png" alt="Наверх">
+    </button>
+
+        <!-- ВИДЖЕТ КОНСУЛЬТАНТА (ЧАТ) -->
+    <div class="consultant-widget">
+        <!-- Само всплывающее окно -->
+        <div class="consultant-popup" id="consultantPopup">
+            <button type="button" class="btn-close consultant-close" aria-label="Закрыть" onclick="toggleConsultant()"></button>
+            <div class="d-flex align-items-center mb-3">
+                <div class="consultant-avatar me-3">
+                    <i class="bi bi-person-badge"></i>
+                </div>
+                <div>
+                    <h6 class="fw-bold mb-0 text-dark">Анна, менеджер</h6>
+                    <small class="text-success"><i class="bi bi-circle-fill" style="font-size: 0.5rem; vertical-align: middle;"></i> Онлайн</small>
+                </div>
+            </div>
+            <p class="text-muted small mb-3">Здравствуйте! Помочь вам выбрать направление или ответить на вопросы?</p>
+            <div class="d-grid gap-2">
+                <a href="https://wa.me/79991234567" target="_blank" class="btn btn-success btn-sm rounded-pill text-start">
+                    <i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp
+                </a>
+                <a href="https://t.me/yogabalance" target="_blank" class="btn btn-primary btn-sm rounded-pill text-start" style="background-color: #0088cc; border-color: #0088cc;">
+                    <i class="bi bi-telegram me-2"></i> Написать в Telegram
+                </a>
+                <a href="tel:+79991234567" class="btn btn-outline-secondary btn-sm rounded-pill text-start">
+                    <i class="bi bi-telephone me-2"></i> Позвонить
+                </a>
+            </div>
+        </div>
+
+        <!-- Кнопка вызова консультанта -->
+        <button class="consultant-btn shadow" onclick="toggleConsultant()" aria-label="Связаться с консультантом">
+            <i class="bi bi-chat-dots-fill"></i>
+            <span class="consultant-badge">1</span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+                // Скрипт для виджета консультанта
+        function toggleConsultant() {
+            const popup = document.getElementById('consultantPopup');
+            const badge = document.querySelector('.consultant-badge');
+            
+            if (popup.classList.contains('show-popup')) {
+                popup.classList.remove('show-popup');
+            } else {
+                popup.classList.add('show-popup');
+                // Скрываем красный бейджик, когда пользователь открыл чат
+                if (badge) badge.style.display = 'none'; 
+            }
+        }
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        };
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

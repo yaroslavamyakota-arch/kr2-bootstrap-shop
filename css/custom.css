@@ -25,7 +25,7 @@ footer {
 }
 
 /* =========================================
-   КНОПКИ И ГЛОБАЛЬНЫЕ СТИЛИ (Убираем синий цвет)
+   КНОПКИ И ГЛОБАЛЬНЫЕ СТИЛИ
    ========================================= */
 .btn-primary {
     --bs-btn-bg: var(--bs-primary);
@@ -44,7 +44,6 @@ footer {
     --bs-btn-active-border-color: var(--bs-primary);
 }
 
-/* Убираем синюю обводку при клике на кнопки и поля */
 .btn:focus, .btn:active:focus, .btn-check:focus + .btn, 
 .form-control:focus, .form-select:focus, .form-check-input:focus,
 .navbar-toggler:focus {
@@ -113,12 +112,11 @@ footer {
     color: #e6b8b8 !important;
 }
 
-/* Телефон и время в шапке */
 .nav-phone {
     color: #ffffff !important;
     font-weight: 500;
     text-decoration: none;
-    font-size: 1rem; /* Как у пунктов меню */
+    font-size: 1rem;
     line-height: 1.2;
     margin-bottom: 2px;
     white-space: nowrap;
@@ -134,7 +132,6 @@ footer {
     line-height: 1.2;
 }
 
-/* Кнопка "Записаться" в шапке */
 .btn-nav-order {
     background-color: #3a7b5e;
     color: white !important;
@@ -272,44 +269,25 @@ footer {
 }
 
 /* =========================================
-   ИДЕАЛЬНЫЙ ФУТЕР (Единые размеры)
+   ИДЕАЛЬНЫЙ ФУТЕР
    ========================================= */
 footer {
     background-color: #0d4a32 !important;
-    font-size: 0.9rem; /* Базовый размер текста 14.4px */
+    font-size: 0.9rem;
     color: #9ca3af;
 }
+footer h5 { font-size: 1.25rem; }
+footer h6 { font-size: 1rem; letter-spacing: 0.5px; margin-bottom: 1rem; }
 
-/* Логотип */
-footer h5 {
-    font-size: 1.25rem; /* 20px */
-}
-
-/* Заголовки колонок (Навигация, Филиалы) */
-footer h6 {
-    font-size: 1rem; /* 16px */
-    letter-spacing: 0.5px;
-    margin-bottom: 1rem;
-}
-
-/* Ссылки, текст, адреса */
 footer a, footer p, footer li {
     color: #9ca3af !important;
     text-decoration: none;
     line-height: 1.6;
     transition: color 0.2s ease;
 }
+footer a:hover { color: #e6b8b8 !important; }
+footer p i { color: #e6b8b8 !important; }
 
-footer a:hover {
-    color: #e6b8b8 !important;
-}
-
-/* Иконки контактов */
-footer p i {
-    color: #e6b8b8 !important;
-}
-
-/* Кнопка "Записаться" */
 .btn-footer-order {
     background-color: #3a7b5e;
     color: white !important;
@@ -322,13 +300,11 @@ footer p i {
     text-decoration: none;
     display: inline-block;
 }
-
 .btn-footer-order:hover {
     background-color: #2b5c46;
     color: white !important;
 }
 
-/* Иконки соцсетей */
 .social-icon {
     display: inline-flex;
     align-items: center;
@@ -341,30 +317,18 @@ footer p i {
     color: #9ca3af !important;
     transition: all 0.3s ease;
 }
-
 .social-icon:hover {
     background-color: #e6b8b8 !important;
     color: #0d4a32 !important;
     transform: translateY(-2px);
 }
 
-/* Стили для нижней строки (копирайт) */
-.footer-copy {
-    font-size: 0.85rem; /* Чуть меньше основного текста */
-    color: #6c757d !important;
-}
-
-.footer-copy a {
-    font-size: 0.85rem;
-    color: #6c757d !important;
-}
-
-.footer-copy a:hover {
-    color: #e6b8b8 !important;
-}
+.footer-copy { font-size: 0.85rem; color: #6c757d !important; }
+.footer-copy a { font-size: 0.85rem; color: #6c757d !important; }
+.footer-copy a:hover { color: #e6b8b8 !important; }
 
 /* =========================================
-   КНОПКА "НАВЕРХ"
+   КНОПКА "НАВЕРХ" И ЧАТ-ВИДЖЕТ
    ========================================= */
 #scrollTopBtn {
     position: fixed;
@@ -394,10 +358,144 @@ footer p i {
     transition: transform 0.3s ease;
 }
 
+/* Виджет консультанта */
+.consultant-widget {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1060;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.consultant-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3a7b5e;
+    color: white;
+    border: none;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.consultant-btn:hover {
+    background-color: #0d4a32;
+    transform: scale(1.05);
+}
+.consultant-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fcf5f5;
+}
+.consultant-popup {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+    position: relative;
+    display: none;
+    border: 1px solid rgba(58, 123, 94, 0.1);
+}
+.consultant-popup.show-popup {
+    display: block;
+    animation: slideUp 0.3s ease forwards;
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.consultant-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.7rem;
+}
+.consultant-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #fdf2f2;
+    color: #3a7b5e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* =========================================
+   ВСПЛЫВАЮЩИЕ УВЕДОМЛЕНИЯ (ТОСТЫ)
+   ========================================= */
+.toast-container {
+    margin-top: 80px;
+}
+.toast {
+    min-width: 300px;
+    border-left: 5px solid #3a7b5e !important;
+    backdrop-filter: blur(10px);
+}
+.toast-body {
+    padding: 5px;
+}
+
 /* Адаптив */
 @media (max-width: 991px) {
     .hero-img-custom {
         border-radius: 2rem;
         max-height: 400px;
     }
+}
+@media (max-width: 576px) {
+    .consultant-widget { bottom: 20px; left: 20px; }
+    .consultant-popup { width: 260px; }
+    .consultant-btn { width: 50px; height: 50px; font-size: 1.5rem; }
+}
+/* =========================================
+   СТИЛИ ДЛЯ ВКЛАДОК ДНЕЙ НЕДЕЛИ (НАВ-ПИЛЛС)
+   ========================================= */
+
+/* Цвет текста для неактивных вкладок */
+.nav-pills .nav-link {
+    color: var(--bs-primary) !important; /* Делаем текст зеленым */
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 8px 24px;
+    margin: 0 4px;
+    transition: all 0.2s ease;
+}
+
+/* Фон для активной вкладки */
+.nav-pills .nav-link.active {
+    background-color: var(--bs-primary) !important; /* Фон фирменный зеленый */
+    color: white !important; /* Текст белый */
+    box-shadow: 0 4px 10px rgba(58, 123, 94, 0.3);
+}
+
+/* Красивый эффект при наведении на неактивные вкладки */
+.nav-pills .nav-link:hover {
+    background-color: #fdf2f2; /* Нежно-розовый фон */
+    color: var(--bs-dark) !important; /* Темно-зеленый текст */
+}
+
+/* Убираем стандартную синюю обводку при клике */
+.nav-pills .nav-link:focus {
+    outline: none;
+    box-shadow: none;
 }

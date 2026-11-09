@@ -23,7 +23,9 @@
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Главная</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="catalog.html">Направления</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="schedule.html">Расписание</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="trainers.html">Тренеры</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="materials.html">Полезные материалы</a></li>
                     <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">О нас</a></li>
                 </ul>
                 <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
@@ -69,7 +71,11 @@
             <!-- Содержимое генерируется скриптом -->
         </div>
 
-        <h3 class="mb-3 text-dark fw-bold">Расписание занятий</h3>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="mb-0 text-dark fw-bold">Расписание занятий</h3>
+            <a href="schedule.html" class="btn btn-outline-primary rounded-pill px-4"> Полное расписание <i class="bi bi-arrow-right ms-1"></i> </a>
+        </div>
+
         <div class="table-responsive mb-5">
             <table class="table table-hover align-middle custom-table">
                 <thead>
@@ -137,7 +143,9 @@
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2"><a href="index.html">Главная</a></li>
                         <li class="mb-2"><a href="catalog.html">Направления</a></li>
+                        <li class="mb-2"><a href="schedule.html">Расписание</a></li>
                         <li class="mb-2"><a href="trainers.html">Тренеры</a></li>
+                        <li class="mb-2"><a href="materials.html">Полезные материалы</a></li>
                         <li><a href="about.html">О нас</a></li>
                     </ul>
                 </div>
@@ -189,13 +197,63 @@
         <img src="images/yoga-up.png" alt="Наверх">
     </button>
 
+    <!-- ВИДЖЕТ КОНСУЛЬТАНТА (ЧАТ) -->
+    <div class="consultant-widget">
+        <!-- Само всплывающее окно -->
+        <div class="consultant-popup" id="consultantPopup">
+            <button type="button" class="btn-close consultant-close" aria-label="Закрыть" onclick="toggleConsultant()"></button>
+            <div class="d-flex align-items-center mb-3">
+                <div class="consultant-avatar me-3">
+                    <i class="bi bi-person-badge"></i>
+                </div>
+                <div>
+                    <h6 class="fw-bold mb-0 text-dark">Анна, менеджер</h6>
+                    <small class="text-success"><i class="bi bi-circle-fill" style="font-size: 0.5rem; vertical-align: middle;"></i> Онлайн</small>
+                </div>
+            </div>
+            <p class="text-muted small mb-3">Здравствуйте! Помочь вам выбрать направление или ответить на вопросы?</p>
+            <div class="d-grid gap-2">
+                <a href="https://wa.me/79991234567" target="_blank" class="btn btn-success btn-sm rounded-pill text-start">
+                    <i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp
+                </a>
+                <a href="https://t.me/yogabalance" target="_blank" class="btn btn-primary btn-sm rounded-pill text-start" style="background-color: #0088cc; border-color: #0088cc;">
+                    <i class="bi bi-telegram me-2"></i> Написать в Telegram
+                </a>
+                <a href="tel:+79991234567" class="btn btn-outline-secondary btn-sm rounded-pill text-start">
+                    <i class="bi bi-telephone me-2"></i> Позвонить
+                </a>
+            </div>
+        </div>
+
+        <!-- Кнопка вызова консультанта -->
+        <button class="consultant-btn shadow" onclick="toggleConsultant()" aria-label="Связаться с консультантом">
+            <i class="bi bi-chat-dots-fill"></i>
+            <span class="consultant-badge">1</span>
+        </button>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
+        // Скрипт для виджета консультанта
+        function toggleConsultant() {
+            const popup = document.getElementById('consultantPopup');
+            const badge = document.querySelector('.consultant-badge');
+            
+            if (popup.classList.contains('show-popup')) {
+                popup.classList.remove('show-popup');
+            } else {
+                popup.classList.add('show-popup');
+                // Скрываем красный бейджик, когда пользователь открыл чат
+                if (badge) badge.style.display = 'none'; 
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const direction = urlParams.get('direction') || 'hatha';
 
+            // ОБНОВЛЕННАЯ БАЗА ДАННЫХ (СИНХРОНИЗИРОВАНА С schedule.html)
             const data = {
                 'hatha': {
                     title: 'Хатха-йога',
@@ -210,8 +268,9 @@
                     ],
                     schedule: [
                         ['Понедельник', '09:00 – 10:30', 'Анна Смирнова', 'Новички'],
-                        ['Среда', '19:00 – 20:30', 'Анна Смирнова', 'Средний'],
-                        ['Суббота', '11:00 – 12:30', 'Елена Иванова', 'Все уровни']
+                        ['Вторник', '18:00 – 19:30', 'Алексей Новиков', 'Все уровни (Йога для спины)'],
+                        ['Среда', '19:00 – 20:30', 'Анна Смирнова', 'Новички'],
+                        ['Суббота', '11:00 – 12:30', 'Елена Иванова', 'Новички']
                     ]
                 },
                 'vinyasa': {
@@ -226,9 +285,10 @@
                         { name: 'Иван Волков', role: 'Инструктор силовых практик', id: 'ivan', img: 'images/trainer-ivan.jpg' }
                     ],
                     schedule: [
+                        ['Понедельник', '19:00 – 20:30', 'Анна Смирнова', 'Средний'],
                         ['Вторник', '08:00 – 09:30', 'Дмитрий Петров', 'Средний'],
-                        ['Четверг', '19:00 – 20:30', 'Иван Волков', 'Продвинутый'],
-                        ['Воскресенье', '10:00 – 11:30', 'Дмитрий Петров', 'Все уровни']
+                        ['Четверг', '19:00 – 20:30', 'Иван Волков', 'Средний'],
+                        ['Воскресенье', '10:00 – 11:30', 'Дмитрий Петров', 'Средний']
                     ]
                 },
                 'yin': {
@@ -244,7 +304,7 @@
                     ],
                     schedule: [
                         ['Пятница', '20:00 – 21:30', 'Елена Иванова', 'Все уровни'],
-                        ['Суббота', '18:00 – 19:30', 'Мария Ким', 'Новички']
+                        ['Суббота', '18:00 – 19:30', 'Мария Ким', 'Все уровни']
                     ]
                 },
                 'ashtanga': {
@@ -276,7 +336,7 @@
                     ],
                     schedule: [
                         ['Среда', '08:00 – 09:30', 'Мария Ким', 'Все уровни'],
-                        ['Суббота', '09:00 – 10:30', 'Ольга Соколова', 'Новички']
+                        ['Суббота', '09:00 – 10:30', 'Ольга Соколова', 'Все уровни']
                     ]
                 }
             };

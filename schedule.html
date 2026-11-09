@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание – Студия йоги "Баланс"</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-custom" href="index.html">
+                <div class="logo-wrapper"><img src="images/yoga-up.png" alt="Логотип"></div>
+                YogaBalance
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="catalog.html">Направления</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom active" href="schedule.html">Расписание</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="trainers.html">Тренеры</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="materials.html">Полезные материалы</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">О нас</a></li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="d-flex flex-column text-center text-lg-end justify-content-center">
+                        <a href="tel:+79991234567" class="nav-phone">+7 (999) 123-45-67</a>
+                        <span class="nav-work-time">Ежедневно с 08:00 до 22:00</span>
+                    </div>
+                    <a href="order.html" class="btn btn-nav-order">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="text-center mb-4">
+            <h2 class="display-5 fw-bold text-dark">Расписание занятий</h2>
+            <p class="lead text-muted">Выберите удобный день, филиал и запишитесь на практику.</p>
+        </div>
+
+        <!-- Фильтр по филиалам (Кнопки) -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+            <button class="btn branch-filter-btn active" data-branch="all">Все филиалы</button>
+            <button class="btn branch-filter-btn" data-branch="center">Центральный</button>
+            <button class="btn branch-filter-btn" data-branch="south">Южный</button>
+            <button class="btn branch-filter-btn" data-branch="north">Северный</button>
+        </div>
+
+        <!-- Вкладки с днями недели -->
+        <ul class="nav nav-pills mb-4 justify-content-center flex-nowrap overflow-auto pb-2" id="scheduleTabs" role="tablist" style="scrollbar-width: none;">
+            <li class="nav-item" role="presentation"><button class="nav-link active" id="mon-tab" data-bs-toggle="pill" data-bs-target="#mon" type="button" role="tab">Пн</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tue-tab" data-bs-toggle="pill" data-bs-target="#tue" type="button" role="tab">Вт</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="wed-tab" data-bs-toggle="pill" data-bs-target="#wed" type="button" role="tab">Ср</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="thu-tab" data-bs-toggle="pill" data-bs-target="#thu" type="button" role="tab">Чт</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="fri-tab" data-bs-toggle="pill" data-bs-target="#fri" type="button" role="tab">Пт</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="sat-tab" data-bs-toggle="pill" data-bs-target="#sat" type="button" role="tab">Сб</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="sun-tab" data-bs-toggle="pill" data-bs-target="#sun" type="button" role="tab">Вс</button></li>
+        </ul>
+
+        <!-- Контент вкладок -->
+        <div class="tab-content" id="scheduleTabsContent">
+            
+            <!-- Понедельник -->
+            <div class="tab-pane fade show active" id="mon" role="tabpanel">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle custom-table schedule-table mb-0">
+                            <thead>
+                                <tr><th>Время</th><th>Направление</th><th>Уровень</th><th>Тренер</th><th>Филиал</th><th>Места</th><th></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr data-branch="center">
+                                    <td class="fw-bold">07:00 – 08:30</td>
+                                    <td><i class="bi bi-fire text-success me-2"></i> Аштанга</td>
+                                    <td><span class="badge bg-light text-dark border">Продвинутый</span></td>
+                                    <td>Дмитрий Петров</td>
+                                    <td>Центральный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=ashtanga&trainer=dmitry&branch=center" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                                <tr data-branch="center">
+                                    <td class="fw-bold">09:00 – 10:30</td>
+                                    <td><i class="bi bi-sun text-success me-2"></i> Хатха-йога</td>
+                                    <td><span class="badge bg-light text-dark border">Новички</span></td>
+                                    <td>Анна Смирнова</td>
+                                    <td>Центральный</td>
+                                    <td><span class="badge bg-danger bg-opacity-25 text-danger">Мест нет</span></td>
+                                    <td class="text-end"><button class="btn btn-sm btn-outline-secondary" disabled>Записаться</button></td>
+                                </tr>
+                                <tr data-branch="south">
+                                    <td class="fw-bold">19:00 – 20:30</td>
+                                    <td><i class="bi bi-wind text-success me-2"></i> Виньяса</td>
+                                    <td><span class="badge bg-light text-dark border">Средний</span></td>
+                                    <td>Анна Смирнова</td>
+                                    <td>Южный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=vinyasa&trainer=anna&branch=south" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вторник -->
+            <div class="tab-pane fade" id="tue" role="tabpanel">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle custom-table schedule-table mb-0">
+                            <thead>
+                                <tr><th>Время</th><th>Направление</th><th>Уровень</th><th>Тренер</th><th>Филиал</th><th>Места</th><th></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr data-branch="north">
+                                    <td class="fw-bold">08:00 – 09:30</td>
+                                    <td><i class="bi bi-wind text-success me-2"></i> Виньяса</td>
+                                    <td><span class="badge bg-light text-dark border">Средний</span></td>
+                                    <td>Дмитрий Петров</td>
+                                    <td>Северный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=vinyasa&trainer=dmitry&branch=north" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                                <tr data-branch="center">
+                                    <td class="fw-bold">18:00 – 19:30</td>
+                                    <td><i class="bi bi-flower1 text-success me-2"></i> Йога для спины</td>
+                                    <td><span class="badge bg-light text-dark border">Все уровни</span></td>
+                                    <td>Алексей Новиков</td>
+                                    <td>Центральный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?trainer=alexey&branch=center" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Среда -->
+            <div class="tab-pane fade" id="wed" role="tabpanel">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle custom-table schedule-table mb-0">
+                            <thead>
+                                <tr><th>Время</th><th>Направление</th><th>Уровень</th><th>Тренер</th><th>Филиал</th><th>Места</th><th></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr data-branch="center">
+                                    <td class="fw-bold">08:00 – 09:30</td>
+                                    <td><i class="bi bi-lightning-charge text-success me-2"></i> Кундалини</td>
+                                    <td><span class="badge bg-light text-dark border">Все уровни</span></td>
+                                    <td>Мария Ким</td>
+                                    <td>Центральный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=kundalini&trainer=maria&branch=center" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                                <tr data-branch="south">
+                                    <td class="fw-bold">19:00 – 20:30</td>
+                                    <td><i class="bi bi-sun text-success me-2"></i> Хатха-йога</td>
+                                    <td><span class="badge bg-light text-dark border">Новички</span></td>
+                                    <td>Анна Смирнова</td>
+                                    <td>Южный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=hatha&trainer=anna&branch=south" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Четверг -->
+            <div class="tab-pane fade" id="thu" role="tabpanel">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle custom-table schedule-table mb-0">
+                            <thead>
+                                <tr><th>Время</th><th>Направление</th><th>Уровень</th><th>Тренер</th><th>Филиал</th><th>Места</th><th></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr data-branch="north">
+                                    <td class="fw-bold">07:00 – 08:30</td>
+                                    <td><i class="bi bi-fire text-success me-2"></i> Аштанга</td>
+                                    <td><span class="badge bg-light text-dark border">Продвинутый</span></td>
+                                    <td>Иван Волков</td>
+                                    <td>Северный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=ashtanga&trainer=ivan&branch=north" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                                <tr data-branch="center">
+                                    <td class="fw-bold">19:00 – 20:30</td>
+                                    <td><i class="bi bi-wind text-success me-2"></i> Виньяса</td>
+                                    <td><span class="badge bg-light text-dark border">Средний</span></td>
+                                    <td>Иван Волков</td>
+                                    <td>Центральный</td>
+                                    <td><span class="badge bg-danger bg-opacity-25 text-danger">Мест нет</span></td>
+                                    <td class="text-end"><button class="btn btn-sm btn-outline-secondary" disabled>Записаться</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Пятница -->
+            <div class="tab-pane fade" id="fri" role="tabpanel">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle custom-table schedule-table mb-0">
+                            <thead>
+                                <tr><th>Время</th><th>Направление</th><th>Уровень</th><th>Тренер</th><th>Филиал</th><th>Места</th><th></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr data-branch="south">
+                                    <td class="fw-bold">20:00 – 21:30</td>
+                                    <td><i class="bi bi-moon-stars text-success me-2"></i> Инь-йога</td>
+                                    <td><span class="badge bg-light text-dark border">Все уровни</span></td>
+                                    <td>Елена Иванова</td>
+                                    <td>Южный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=yin&trainer=elena&branch=south" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Суббота -->
+            <div class="tab-pane fade" id="sat" role="tabpanel">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle custom-table schedule-table mb-0">
+                            <thead>
+                                <tr><th>Время</th><th>Направление</th><th>Уровень</th><th>Тренер</th><th>Филиал</th><th>Места</th><th></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr data-branch="center">
+                                    <td class="fw-bold">09:00 – 10:30</td>
+                                    <td><i class="bi bi-lightning-charge text-success me-2"></i> Кундалини</td>
+                                    <td><span class="badge bg-light text-dark border">Все уровни</span></td>
+                                    <td>Ольга Соколова</td>
+                                    <td>Центральный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=kundalini&trainer=olga&branch=center" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                                <tr data-branch="north">
+                                    <td class="fw-bold">11:00 – 12:30</td>
+                                    <td><i class="bi bi-sun text-success me-2"></i> Хатха-йога</td>
+                                    <td><span class="badge bg-light text-dark border">Новички</span></td>
+                                    <td>Елена Иванова</td>
+                                    <td>Северный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=hatha&trainer=elena&branch=north" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                                <tr data-branch="south">
+                                    <td class="fw-bold">18:00 – 19:30</td>
+                                    <td><i class="bi bi-moon-stars text-success me-2"></i> Инь-йога</td>
+                                    <td><span class="badge bg-light text-dark border">Все уровни</span></td>
+                                    <td>Мария Ким</td>
+                                    <td>Южный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=yin&trainer=maria&branch=south" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Воскресенье -->
+            <div class="tab-pane fade" id="sun" role="tabpanel">
+                <div class="card shadow-sm border-0 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle custom-table schedule-table mb-0">
+                            <thead>
+                                <tr><th>Время</th><th>Направление</th><th>Уровень</th><th>Тренер</th><th>Филиал</th><th>Места</th><th></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr data-branch="center">
+                                    <td class="fw-bold">10:00 – 11:30</td>
+                                    <td><i class="bi bi-wind text-success me-2"></i> Виньяса</td>
+                                    <td><span class="badge bg-light text-dark border">Средний</span></td>
+                                    <td>Дмитрий Петров</td>
+                                    <td>Центральный</td>
+                                    <td><span class="badge bg-success bg-opacity-25 text-success">Есть места</span></td>
+                                    <td class="text-end"><a href="order.html?direction=vinyasa&trainer=dmitry&branch=center" class="btn btn-sm btn-primary">Записаться</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="pt-5 pb-4 mt-auto">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none mb-2">
+                        <div class="logo-wrapper" style="width: 36px; height: 36px; margin-right: 10px;">
+                            <img src="images/yoga-up.png" alt="Логотип">
+                        </div>
+                        <h5 class="fw-bold mb-0 text-white">YogaBalance</h5>
+                    </a>
+                    <p class="fst-italic text-white-50 mb-5">«Твой путь к внутреннему балансу»</p>
+                    <a href="order.html" class="btn btn-footer-order">Записаться</a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">Навигация</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html">Главная</a></li>
+                        <li class="mb-2"><a href="catalog.html">Направления</a></li>
+                        <li class="mb-2"><a href="schedule.html">Расписание</a></li>
+                        <li class="mb-2"><a href="trainers.html">Тренеры</a></li>
+                        <li class="mb-2"><a href="materials.html">Полезные материалы</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <h6 class="fw-bold mb-3 text-white text-uppercase">
+                        <i class="bi bi-geo-alt-fill me-1" style="color: #e6b8b8;"></i>Наши филиалы
+                    </h6>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Центральный:</span> ул. Ленина, 10</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Южный:</span> ул. Южная, 7</div>
+                        <div class="col-sm-6 mb-1"><span class="text-white fw-bold">Северный:</span> пр. Мира, 45</div>
+                    </div>
+                    <hr class="border-secondary my-3" style="max-width: 250px; opacity: 0.3;">
+                    <div class="mb-0">
+                        <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i><a href="tel:+79991234567" class="footer-contact-link fw-bold">+7 (999) 123-45-67</a></p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i>Ежедневно с 08:00 до 22:00</p>
+                        <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i><a href="mailto:info@yogabalance.ru" class="footer-contact-link">info@yogabalance.ru</a></p>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary mb-3" style="opacity: 0.2;">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start footer-copy">
+                    &copy; 2026 Студия йоги "Баланс". Все права защищены.
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0 footer-copy">
+                    <a href="#" class="me-3">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="btn" aria-label="Наверх">
+        <img src="images/yoga-up.png" alt="Наверх">
+    </button>
+
+    <!-- ВИДЖЕТ КОНСУЛЬТАНТА -->
+    <div class="consultant-widget">
+        <div class="consultant-popup" id="consultantPopup">
+            <button type="button" class="btn-close consultant-close" aria-label="Закрыть" onclick="toggleConsultant()"></button>
+            <div class="d-flex align-items-center mb-3">
+                <div class="consultant-avatar me-3"><i class="bi bi-person-badge"></i></div>
+                <div>
+                    <h6 class="fw-bold mb-0 text-dark">Анна, менеджер</h6>
+                    <small class="text-success"><i class="bi bi-circle-fill" style="font-size: 0.5rem; vertical-align: middle;"></i> Онлайн</small>
+                </div>
+            </div>
+            <p class="text-muted small mb-3">Здравствуйте! Помочь вам выбрать направление или ответить на вопросы?</p>
+            <div class="d-grid gap-2">
+                <a href="https://wa.me/79991234567" target="_blank" class="btn btn-success btn-sm rounded-pill text-start"><i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp</a>
+                <a href="https://t.me/yogabalance" target="_blank" class="btn btn-primary btn-sm rounded-pill text-start" style="background-color: #0088cc; border-color: #0088cc;"><i class="bi bi-telegram me-2"></i> Написать в Telegram</a>
+                <a href="tel:+79991234567" class="btn btn-outline-secondary btn-sm rounded-pill text-start"><i class="bi bi-telephone me-2"></i> Позвонить</a>
+            </div>
+        </div>
+        <button class="consultant-btn shadow" onclick="toggleConsultant()" aria-label="Связаться с консультантом">
+            <i class="bi bi-chat-dots-fill"></i>
+            <span class="consultant-badge">1</span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleConsultant() {
+            const popup = document.getElementById('consultantPopup');
+            const badge = document.querySelector('.consultant-badge');
+            if (popup.classList.contains('show-popup')) {
+                popup.classList.remove('show-popup');
+            } else {
+                popup.classList.add('show-popup');
+                if (badge) badge.style.display = 'none'; 
+            }
+        }
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        };
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Логика фильтрации по филиалам (Кнопки)
+        const filterBtns = document.querySelectorAll('.branch-filter-btn');
+        const scheduleRows = document.querySelectorAll('.schedule-table tbody tr');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const selectedBranch = this.getAttribute('data-branch');
+
+                scheduleRows.forEach(row => {
+                    const rowBranch = row.getAttribute('data-branch');
+                    if (selectedBranch === 'all' || selectedBranch === rowBranch) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
